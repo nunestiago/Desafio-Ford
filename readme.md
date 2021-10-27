@@ -1,9 +1,14 @@
-# Notas
+# Desafio Ford seleção Out/2021
 
-- Não importa a distancia real
+## Notas
+
+- Não importa a distância real
 - Conectar os pontos
 
-# Instruções
+## Instruções
 
 - Fazer o desafio com obejetos
 - Fazer trigger de true ou false de entradas e saídas
+- Analisar quantas entradas
+- Analisar quantas saídas
+- Calcular possível novas rotas
