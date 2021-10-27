@@ -8,8 +8,7 @@ const regioes = {
 
 const rotas = [
   ["Norte", "Nordeste"],
-  ["Nordeste", "Sudeste"],
-  ["Sudeste", "Sul"],
+  ["Norte", "Sul"],
 ];
 
 function menorRota(routes) {
@@ -30,7 +29,8 @@ function menorRota(routes) {
       result++;
     }
   }
-  console.log(Math.ceil((10 - result) / 2));
+  result = Math.ceil((10 - result) / 2);
+  console.log(result);
   return result;
 }
 
