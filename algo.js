@@ -6,7 +6,13 @@ const regioes = {
   Sul: { entrada: false, saida: false },
 };
 
-const rotas = [["Norte", "Nordeste"]];
+const rotas = [
+  ["Norte", "Nordeste"],
+
+  ["Nordeste", "Sudeste"],
+
+  ["Sudeste", "Sul"],
+];
 
 function menorRota(routes) {
   let result = 0;
@@ -30,8 +36,7 @@ function menorRota(routes) {
     }
   }
   // Obter quantas rotas não estão conectadas e conectar
-  console.log(result);
-  result = Math.ceil((10 - result) / 2);
+  result = Math.ceil((11 - result) / 2);
 
   console.log(result);
   return result;
