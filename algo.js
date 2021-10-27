@@ -6,15 +6,13 @@ const regioes = {
   Sul: { entrada: false, saida: false },
 };
 
-const rotas = [
-  ["Norte", "Nordeste"],
-  ["Norte", "Sul"],
-];
+const rotas = [["Norte", "Nordeste"]];
 
 function menorRota(routes) {
   let result = 0;
   for (const key in regioes) {
     for (let i = 0; i < routes.length; i++) {
+      // Verifica se a rota entra ou sai da região
       if (rotas[i][0] === key) {
         regioes[key].entrada = true;
       }
@@ -22,6 +20,8 @@ function menorRota(routes) {
         regioes[key].saida = true;
       }
     }
+
+    // Conta as rotas já existentes
     if (regioes[key].entrada === true) {
       result++;
     }
@@ -29,7 +29,10 @@ function menorRota(routes) {
       result++;
     }
   }
+  // Obter quantas rotas não estão conectadas e conectar
+  console.log(result);
   result = Math.ceil((10 - result) / 2);
+
   console.log(result);
   return result;
 }
